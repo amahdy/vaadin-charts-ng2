@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Vaadin-Icons';
+  src: url('../fonts/Vaadin-Icons.eot');
+  src: url('../fonts/Vaadin-Icons.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Vaadin-Icons.woff') format('woff'),
+  url('../fonts/Vaadin-Icons.ttf') format('truetype'),
+  url('../fonts/Vaadin-Icons.svg#icomoon') format('svg');
+}
+
+population-list {
+  position: absolute;
+  left: 30px;
+  width: 537px;
+}
+
+population-chart {
+  position: absolute;
+  right: 30px;
+  top: 70px;
+  width: 1000px;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  font-weight: 300;
+}

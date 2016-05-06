@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Population App</title>
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="Population App">
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Population App">
+
+  <link rel="stylesheet" href="styles/main.css" async>
+  <script src="app/getjson.js"></script>
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
+
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+  <script>
+    HTMLImports.whenReady(function() {
+      System.config({
+        packages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          },
+          'bower_components': {
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+        .then(null, console.error.bind(console));
+    });
+  </script>
+
+</head>
+
+<body>
+  <population-app>
+    loading...
+  </population-app>
+</body>
+
+</html>
