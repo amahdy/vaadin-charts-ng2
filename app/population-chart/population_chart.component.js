@@ -1,4 +1,4 @@
-System.register(['angular2/core', './population-list/population_list.component', './population-chart/population_chart.component'], function(exports_1, context_1) {
+System.register(['angular2/core', '../../bower_components/vaadin-charts/directives/vaadin-charts'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,35 +10,32 @@ System.register(['angular2/core', './population-list/population_list.component',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, population_list_component_1, population_chart_component_1;
-    var PopulationApp;
+    var core_1, vaadin_charts_1;
+    var PopulationChart;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (population_list_component_1_1) {
-                population_list_component_1 = population_list_component_1_1;
-            },
-            function (population_chart_component_1_1) {
-                population_chart_component_1 = population_chart_component_1_1;
+            function (vaadin_charts_1_1) {
+                vaadin_charts_1 = vaadin_charts_1_1;
             }],
         execute: function() {
-            PopulationApp = (function () {
-                function PopulationApp() {
+            PopulationChart = (function () {
+                function PopulationChart() {
                 }
-                PopulationApp = __decorate([
+                PopulationChart = __decorate([
                     core_1.Component({
-                        selector: 'population-app',
-                        template: "\n      <population-list></population-list>\n      <population-chart></population-chart>\n    ",
-                        directives: [population_list_component_1.PopulationList, population_chart_component_1.PopulationChart]
+                        selector: 'population-chart',
+                        templateUrl: './app/population-chart/population_chart.component.html',
+                        directives: [vaadin_charts_1.VaadinCharts, vaadin_charts_1.DataSeries]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], PopulationApp);
-                return PopulationApp;
+                ], PopulationChart);
+                return PopulationChart;
             }());
-            exports_1("PopulationApp", PopulationApp);
+            exports_1("PopulationChart", PopulationChart);
         }
     }
 });
-//# sourceMappingURL=population_app.component.js.map
+//# sourceMappingURL=population_chart.component.js.map
