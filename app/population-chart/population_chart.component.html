@@ -1,12 +1,14 @@
 <vaadin-column-chart>
   <chart-title>German Population 2010</chart-title>
+  <subtitle>Source: www.census.gov</subtitle>
   <x-axis type="category">
   </x-axis>
   <y-axis>
-    <title>Age Group</title>
+    <title>Population</title>
   </y-axis>
   <legend reversed="true"></legend>
-  <tooltip point-format="{series.name}: {point.y}. Total: {point.stackTotal}"></tooltip>
+  <tooltip point-format="<b>{series.name}, age {point.x}.</b><br/>
+  Population: {point.y}"></tooltip>
   <data-series name="Male" [data]="maleData">
   </data-series>
   <data-series name="Female" [data]="femaleData">
