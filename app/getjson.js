@@ -5,6 +5,24 @@
     }
   };
 
+  window.getMaleData = function() {
+    var data = Array();
+    for(var c of population) {
+      data = data.concat([c.category, c.male]);
+    }
+
+    return data;
+  }
+
+  window.getFemaleData = function() {
+    var data = Array();
+    for(var c of population) {
+      data = data.concat([c.category, c.female]);
+    }
+
+    return data;
+  }
+
   var population = [
     {"category" : "0-4", "male" : 1746181, "female" : 1656154},
     {"category" : "5-9", "male" : 1884428, "female" : 1787564},

@@ -23,6 +23,8 @@ System.register(['angular2/core', '../../bower_components/vaadin-charts/directiv
         execute: function() {
             PopulationChart = (function () {
                 function PopulationChart() {
+                    this.femaleData = window.getFemaleData();
+                    this.maleData = window.getMaleData();
                 }
                 PopulationChart = __decorate([
                     core_1.Component({

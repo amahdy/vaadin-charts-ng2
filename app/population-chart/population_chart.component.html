@@ -1,24 +1,18 @@
-<vaadin-bar-chart id="basic-bar">
-  <chart-title>Stacked bar chart</chart-title>
-  <x-axis>
-    <categories>Apples, Oranges, Pears, Grapes, Bananas</categories>
+<vaadin-bar-chart>
+  <chart-title>German Population 2010</chart-title>
+  <x-axis type="category">
   </x-axis>
-  <y-axis min="0">
-    <title>Total fruit consumption</title>
+  <y-axis>
+    <title>Age Group</title>
   </y-axis>
   <legend reversed="true"></legend>
   <tooltip point-format="{series.name}: {point.y}. Total: {point.stackTotal}"></tooltip>
   <plot-options>
-    <series stacking="normal">
+    <series stacking="percentage">
     </series>
   </plot-options>
-  <data-series name="John">
-    <data>5, 3, 4, 7, 2</data>
+  <data-series name="Male" [data]="maleData">
   </data-series>
-  <data-series name="Jane">
-    <data>2, 2, 3, 2, 1</data>
-  </data-series>
-  <data-series name="Joe">
-    <data>3, 4, 4, 2, 5</data>
+  <data-series name="Female" [data]="femaleData">
   </data-series>
 </vaadin-bar-chart>

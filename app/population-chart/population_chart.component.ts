@@ -9,4 +9,11 @@ import {VaadinCharts, DataSeries} from '../../bower_components/vaadin-charts/dir
 
 export class PopulationChart {
 
+  private femaleData;
+  private maleData;
+
+  constructor() {
+    this.femaleData = window.getFemaleData();
+    this.maleData = window.getMaleData();
+  }
 }
